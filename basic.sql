@@ -27,7 +27,7 @@ DESC prducts;
 SELECT * FROM products;
 
 -- Select only specific coloumn
-SELECT (id, name, price, quantity) FROM products;
+SELECT id, name, price, quantity FROM products;
 
 -- DELETE All Data on TABLE
 TRUNCATE TABLE products;
@@ -38,24 +38,7 @@ DROP TABLE products;
 -- WHERE CLAUSE
 SELECT * FROM products WHERE quantity=0;
 
--- Update Data on Table
-UPDATE products
-SET category = 'Makanan'
-    description = 'Bakso Biasa'
-WHERE id = 'P0003';
-
--- How to create modified date coloumn on Table
-CREATE TRIGGER trg_products_UpdateModifiedDate
-BEFORE UPDATE
-ON products
-FOR EACH ROW
-SET NEW.modified_date = CURRENT_TIMESTAMP;
-
--- Mengubah data dengan value
-UPDATE products
-SET price = price + 5000
-WHERE id = 'P0001';
-
 -- Delete data on Table
 DELETE FROM products
 WHERE id = 'P0003';
+
