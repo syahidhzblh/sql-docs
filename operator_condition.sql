@@ -19,3 +19,11 @@ SELECT * FROM products WHERE name LIKE '%aso%' -- Untuk data yang memiliki huruf
 -- Find NULL data or NOT NULL data
 SELECT * FROM products WHERE description IS NULL;
 SELECT * FROM products WHERE description IS NOT NULL;
+
+-- BETWEEN Operator
+SELECT * FROM products WHERE price BETWEEN 10000 AND 20000;
+SELECT * FROM products WHERE price NOT BETWEEN 10000 AND 20000;
+
+-- IN Operator untuk menampilkan data yang berisikan spesifik yang kita tentukan, Alternatif dari OR Operator
+SELECT * FROM products WHERE category IN('Makanan','Minuman');
+SELECT * FROM products WHERE category NOT IN('Makanan','Minuman');
