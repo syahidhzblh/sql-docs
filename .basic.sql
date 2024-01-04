@@ -20,6 +20,19 @@ INSERT INTO productcs (id, name, price, quantity)
 VALUES ('P0001', 'Mie Ayam', 15000, 100),
         ('P0002', 'Mie Ayam Bakso', 20000, 100)
 
+-- DELETE All Data on TABLE
+TRUNCATE TABLE products;
+
+-- DELETE TABLE 
+DROP TABLE products;
+
+-- Delete data on Table
+DELETE FROM products
+WHERE id = 'P0003';
+
+-- Rename Table
+RENAME TABLE product TO products;
+
 -- SHOW Description on Table
 DESC prducts;
 
@@ -29,16 +42,5 @@ SELECT * FROM products;
 -- Select only specific coloumn
 SELECT id, name, price, quantity FROM products;
 
--- DELETE All Data on TABLE
-TRUNCATE TABLE products;
-
--- DELETE TABLE 
-DROP TABLE products;
-
 -- WHERE CLAUSE
 SELECT * FROM products WHERE quantity=0;
-
--- Delete data on Table
-DELETE FROM products
-WHERE id = 'P0003';
-
