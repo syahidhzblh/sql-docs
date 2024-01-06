@@ -20,7 +20,7 @@ DROP CONSTRAINT fK_wishlist_product;
 
 -- ADD Foreign Key in existing table with CASCADE -> will be effected to references table
 ALTER TABLE wishlist
-ADD CONSTRAINT fK_wishlist_product
+ADD CONSTRAINT fk_wishlist_product
     FOREIGN KEY (id_product) REFERENCES products(id)
     ON DELETE CASCADE ON UPDATE CASCADE; -- if we delete product on products table, data on wishlist data will be deleted too
 
