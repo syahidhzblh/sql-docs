@@ -1,0 +1,11 @@
+*BACKUP DB*
+
+mysqldump belajar_mysql --username root --password --result-file=D:/backup-mysql/backup.sql
+
+*RESTORE DB WITH IMPORT*
+
+mysql --user=root --password belajar_mysql_import < C:\Users\Bizzy\Desktop\backup-mysql\backup.sql
+
+*RESTORE DB WITH source syntax*
+
+source (path);
